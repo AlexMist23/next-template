@@ -35,7 +35,7 @@ export default function Nav() {
               className={`hover:text-foreground ${
                 pathname === item.path
                   ? "text-accent-foreground"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground tranition ease-in-out hover:text-white duration-150 "
               } `}
             >
               {item.label}
