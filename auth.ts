@@ -6,6 +6,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import PostgresAdapter from "@auth/pg-adapter";
 
 import { Pool } from "pg";
+import email from "next-auth/providers/email";
 
 const pool = new Pool({
   user: process.env.POSTGRES_USER,
@@ -15,7 +16,7 @@ const pool = new Pool({
   connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 });
 
-export const { handlers, auth } = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PostgresAdapter(pool),
   providers: [
     GitHub,
@@ -38,12 +39,16 @@ export const { handlers, auth } = NextAuth({
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
+        email: {
+          label: "Email",
+          type: "email",
+          placeholder: "user@domain.com",
+        },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        const user = { id: "1", name: "J Smith", email: "jsmith@example.com" };
+        const user = { email: `${credentials.email}` };
 
         if (user) {
           // Any object returned will be saved in `user` property of the JWT
