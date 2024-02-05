@@ -3,7 +3,6 @@ import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import Nav from "@/components/header";
 
 const fontSans = FontSans({
   subsets: ["latin"],

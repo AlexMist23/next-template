@@ -6,7 +6,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import PostgresAdapter from "@auth/pg-adapter";
 
 import { Pool } from "pg";
-import email from "next-auth/providers/email";
 
 const pool = new Pool({
   user: process.env.POSTGRES_USER,
