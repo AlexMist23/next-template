@@ -8,12 +8,7 @@ import PostgresAdapter from "@auth/pg-adapter";
 import { Pool } from "pg";
 
 const pool = new Pool({
-  host: process.env.POSTGRES_HOST,
-  database: process.env.POSTGRES_DATABASE,
-  user: process.env.POSTGRES_USER,
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
+  connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 });
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
