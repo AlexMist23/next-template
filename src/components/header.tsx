@@ -1,7 +1,7 @@
 import { ModeToggle } from "./themeToggleButton";
 import Logo from "@/icons/logo";
 import UserButton from "./user-button";
-import Nav from "./nav";
+import Nav from "@/components/nav";
 
 export default function Header() {
   return (
