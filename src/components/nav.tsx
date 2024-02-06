@@ -7,8 +7,8 @@ export default function Nav() {
   const pathname = usePathname();
   const navItems = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: "About" },
+    { path: "/", label: "Contact" },
   ];
   return (
     <ul className="flex gap-4">
