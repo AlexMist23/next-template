@@ -1,5 +1,5 @@
 import { ModeToggle } from "./themeToggleButton";
-import Logo from "@/icons/logo";
+import Logo from "@/assets/logo";
 import UserButton from "./user-button";
 import Nav from "@/components/nav";
 
