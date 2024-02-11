@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { signIn } from "@/lib/auth";
 import { auth0ProvidersList } from "@/lib/auth";
 import Auth0Forms from "./_components/auth0Forms";
+import EmailForm from "./_components/emailForm";
 export default async function Page() {
   return (
     <main className="flex justify-center container mx-auto px-4 py-12">
@@ -21,6 +22,7 @@ export default async function Page() {
         </CardHeader>
         <CardContent className="flex flex-col space-y-1">
           <Auth0Forms />
+          <EmailForm />
         </CardContent>
       </Card>
     </main>
