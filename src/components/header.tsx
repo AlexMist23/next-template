@@ -1,6 +1,6 @@
-import { ModeToggle } from "./themeToggleButton";
+import { ModeToggle } from "@/components/themeToggleButton";
 import Logo from "@/assets/logo";
-import UserButton from "./user-button";
+import UserButton from "@/components/userButton";
 import Nav from "@/components/nav";
 
 export default function Header() {
