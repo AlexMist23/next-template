@@ -9,5 +9,5 @@ export default function Logo(props: { className: string }) {
     >
       <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" />
     </svg>
-  );
+  )
 }

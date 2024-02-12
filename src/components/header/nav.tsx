@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 export default function Nav() {
-  const pathname = usePathname();
+  const pathname = usePathname()
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/", label: "About" },
     { path: "/", label: "Contact" },
-  ];
+  ]
   return (
     <ul className="flex gap-4">
       {navItems.map((item) => (
@@ -26,5 +26,5 @@ export default function Nav() {
         </Link>
       ))}
     </ul>
-  );
+  )
 }

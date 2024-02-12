@@ -1,17 +1,17 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { signIn } from "@/lib/auth";
-import { auth0ProvidersList } from "@/lib/auth";
-import Auth0Forms from "./_components/auth0Forms";
-import EmailForm from "./_components/emailForm";
+} from "@/components/ui/card"
+import { FormField, FormItem } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { signIn } from "@/lib/auth"
+import { auth0ProvidersList } from "@/lib/auth"
+import Auth0Forms from "./_components/auth0Forms"
+import EmailForm from "./_components/emailForm"
 export default async function Page() {
   return (
     <main className="flex justify-center container mx-auto px-4 py-12">
@@ -26,5 +26,5 @@ export default async function Page() {
         </CardContent>
       </Card>
     </main>
-  );
+  )
 }

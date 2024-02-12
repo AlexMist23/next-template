@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { signIn } from "@/lib/auth";
-import { auth0ProvidersList } from "@/lib/auth";
+import { Button } from "@/components/ui/button"
+import { signIn } from "@/lib/auth"
+import { auth0ProvidersList } from "@/lib/auth"
 export default function Auth0Forms() {
   return (
     <>
@@ -8,8 +8,8 @@ export default function Auth0Forms() {
         <form
           key={provider.signString}
           action={async () => {
-            "use server";
-            await signIn(provider.signString);
+            "use server"
+            await signIn(provider.signString)
           }}
         >
           <Button variant={"secondary"} className="w-[100%]">
@@ -18,5 +18,5 @@ export default function Auth0Forms() {
         </form>
       ))}
     </>
-  );
+  )
 }

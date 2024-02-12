@@ -1,18 +1,18 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { auth } from "@/lib/auth";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { auth } from "@/lib/auth"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { SignIn, SignOut } from "../authComponent";
+} from "../ui/dropdown-menu"
+import { SignIn, SignOut } from "../authComponent"
 
 export default async function UserButton() {
-  const session = await auth();
-  if (!session?.user) return <SignIn />;
+  const session = await auth()
+  if (!session?.user) return <SignIn />
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -44,5 +44,5 @@ export default async function UserButton() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

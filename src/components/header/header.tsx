@@ -1,7 +1,7 @@
-import { ModeToggle } from "@/components/header/themeToggleButton";
-import Logo from "@/assets/logo";
-import UserButton from "@/components/header/userButton";
-import Nav from "@/components/header/nav";
+import { ModeToggle } from "@/components/header/themeToggleButton"
+import Logo from "@/assets/logo"
+import UserButton from "@/components/header/userButton"
+import Nav from "@/components/header/nav"
 
 export default function Header() {
   return (
@@ -18,5 +18,5 @@ export default function Header() {
         <UserButton />
       </div>
     </header>
-  );
+  )
 }
