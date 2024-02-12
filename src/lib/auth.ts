@@ -10,7 +10,7 @@ import PostgresAdapter from "@auth/pg-adapter";
 import { Pool } from "pg";
 
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_CONNECTION_URL,
+  connectionString: process.env.POSTGRES_URL,
 });
 
 export const auth0ProvidersList = [
