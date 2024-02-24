@@ -1,19 +1,16 @@
-import { ModeToggle } from "@/components/header/themeToggleButton"
-import Logo from "@/assets/logo"
-import UserButton from "@/components/header/userButton"
-import Nav from "@/components/header/nav"
+import { ModeToggle } from "@/components/header/theme-toggle-button"
+import UserButton from "@/components/header/user-button"
+import NavigationLinks from "@/components/header/navigation-links"
+import LogoContainer from "./logo-container"
 
 export default function Header() {
   return (
-    <header className="container flex h-12 max-w-screen-2xl items-center border-b-2 border-muted">
-      <div className="hidden md:flex justify-start gap-6">
-        <div className="flex gap-2">
-          <Logo className="h-6 w-6 fill-foreground" />
-          <p className="font-semibold">NexTemplate</p>
-        </div>
-        <Nav />
+    <header className="w-full flex justify-between h-12 max-w-screen-2xl items-center border-b-2 border-muted px-2 gap-4">
+      <div className="flex gap-4">
+        <LogoContainer className="flex justify-center gap-1" />
+        <NavigationLinks />
       </div>
-      <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+      <div className="flex gap-1">
         <ModeToggle />
         <UserButton />
       </div>

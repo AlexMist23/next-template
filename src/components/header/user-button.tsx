@@ -8,9 +8,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu"
-import { SignIn, SignOut } from "../authComponent"
+import { SignIn, SignOut } from "../auth-component"
 
-export default async function UserButton() {
+export default async function UserButton({
+  className,
+}: {
+  className?: string
+}) {
   const session = await auth()
   if (!session?.user) return <SignIn />
   return (
