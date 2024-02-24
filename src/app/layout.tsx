@@ -4,7 +4,6 @@ import "@/styles/globals.css"
 import Providers from "@/providers"
 import { cn } from "@/lib/utils"
 import Header from "@/components/header/header"
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
